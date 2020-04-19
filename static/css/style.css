@@ -5,6 +5,12 @@ a {
   color: black;
 }
 
+/* content */
+#main-text {
+  color: #828282;
+  font-family: 'Lato', sans-serif;
+}
+
 /* footer */
 footer {
   color: lightgrey;

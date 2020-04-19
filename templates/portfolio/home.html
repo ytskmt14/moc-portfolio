@@ -1,9 +1,61 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block page_title %}moc portfolio{% endblock %}
 
 {% block content %}
-<div>
-  Welcome to my portfolio!
+{# top content #}
+<div class="ui segment">
+  <div class="ui two column very relaxed grid">
+    {# left content #}
+    <div class="column">
+      <div id="main-text">
+        <h1 class="ui center aligned header">
+          Stay hungry, stay foolish
+        </h1>
+      </div>
+    </div>
+    {# right content #}
+    <div class="column"></div>
+  </div>
 </div>
+
+
+<div class="ui three column stackable grid">
+  {# Card for About me #}
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <a href="#" class="ui medium image"><img src="{% static 'img/my_profile.jpg'%}"></a>
+      </div>
+      <div class="content">
+        <a href="#" class="header">About me</a>
+      </div>
+    </div>
+  </div>
+  {# Card for Product #}
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <a href="#" class="ui medium image"><img src="{% static 'img/product.jpg'%}"></a>
+      </div>
+      <div class="content">
+        <a href="#" class="header">Products</a>
+      </div>
+    </div>
+  </div>
+  {# Card for Contact #}
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <a href="#" class="ui medium image"><img src="{% static 'img/contact.jpg'%}"></a>
+      </div>
+      <div class="content">
+        <a href="#" class="header">Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock  %}
