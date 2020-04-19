@@ -1,0 +1,13 @@
+@import url("semantic.min.css");
+
+/* header */
+a {
+  color: black;
+}
+
+/* footer */
+footer {
+  color: lightgrey;
+  float: right;
+  margin-top: -15px;
+}
