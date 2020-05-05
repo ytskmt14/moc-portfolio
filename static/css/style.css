@@ -6,9 +6,9 @@ a {
 }
 
 /* content */
-#main-text {
-  color: #828282;
-  font-family: 'Lato', sans-serif;
+.main-text {
+  font-family: "Hannari";
+  /* font-family: 'Lato', sans-serif; */
 }
 
 /* footer */

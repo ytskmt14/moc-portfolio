@@ -7,22 +7,23 @@
     <title>{% block page_title %} {% endblock %}</title>
 
     {# css #}
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato' type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type="text/css">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css'%}"
     {% block extra_css %}{% endblock %}
   </head>
   <body>
     <div class="ui container">
       {# header menu #}
-      <div class="ui menu">
+      <div class="ui stackable menu">
         <div class="header item">
           <a href="{% url "portfolio:home"%}">moc portfolio</a>
         </div>
-        <div class="right menu">
+        {% comment %} <div class="right menu">
           <a href="#" class="item">About me</a>
           <a href="#" class="item">Products</a>
           <a href="#" class="item">Contact</a>
-        </div>
+        </div> {% endcomment %}
       </div>
       {# content #}
       {% block content %}{% endblock  %}
@@ -30,7 +31,8 @@
       <div class="ui divider footer"></div>
       <footer>© 2020 moc.</footer>
     </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/semantic.min.js' %}"></script>
-    {% block extra_js %}{% endblock  %}
+    {% block extra_js %}{% endblock %}
   </body>
 </html>

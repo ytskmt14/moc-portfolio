@@ -7,55 +7,94 @@
 {% block content %}
 {# top content #}
 <div class="ui segment">
-  <div class="ui two column very relaxed grid">
+  <div class="ui two column very relaxed stackable grid">
     {# left content #}
-    <div class="column">
-      <div id="main-text">
-        <h1 class="ui center aligned header">
-          Stay hungry, stay foolish
-        </h1>
-      </div>
+    <div class="middle aligned column">
+      <h1 class="ui center aligned header main-text" style="color: #828282;">
+        Appreciation<br/>and<br/>Affection
+      </h1>
+      <h1 class="ui center aligned header main-text" style="color: #828282;">
+        ー　感謝と愛情　ー
+      </h1>
     </div>
     {# right content #}
-    <div class="column"></div>
+    <div class="column">
+      <img class="ui medium image" src="{% static 'img/coffee.jpg' %}" style="margin-left:100px;">
+    </div>
   </div>
 </div>
-
-
 <div class="ui three column stackable grid">
   {# Card for About me #}
   <div class="column">
-    <div class="ui fluid card">
+    <div id="about" class="ui fluid card">
       <div class="image">
-        <a href="#" class="ui medium image"><img src="{% static 'img/my_profile.jpg'%}"></a>
+        <div class="ui image"><img src="{% static 'img/my_profile.jpg'%}"></div>
       </div>
       <div class="content">
-        <a href="#" class="header">About me</a>
+        <div class="header">About me</div>
       </div>
     </div>
   </div>
   {# Card for Product #}
   <div class="column">
-    <div class="ui fluid card">
+    <div id="product" class="ui fluid card">
       <div class="image">
-        <a href="#" class="ui medium image"><img src="{% static 'img/product.jpg'%}"></a>
+        <div class="ui image"><img src="{% static 'img/product.jpg'%}"></div>
       </div>
       <div class="content">
-        <a href="#" class="header">Products</a>
+        <div class="header">Products</div>
       </div>
     </div>
   </div>
   {# Card for Contact #}
   <div class="column">
-    <div class="ui fluid card">
+    <div id="contact" class="ui fluid card">
       <div class="image">
-        <a href="#" class="ui medium image"><img src="{% static 'img/contact.jpg'%}"></a>
+        <div class="ui image"><img src="{% static 'img/contact.jpg'%}"></div>
       </div>
       <div class="content">
-        <a href="#" class="header">Contact</a>
+        <div class="header" >Contact</div>
       </div>
     </div>
   </div>
+  {# Modal for About #}
+  <div class="ui modal about">
+    <div class="header">
+      About me
+    </div>
+    <div class="scrolling content">
+    </div>
+  </div>
+  {# Modal for Product #}
+  <div class="ui modal product">
+  </div>
+  {# Modal for Contact #}
+  <div class="ui modal contact">
+    <div class="header">Contact</div>
+    <div class="content">
+    <p><i class="twitter icon"></i>　<a href="https://twitter.com/sorigeeeen">@sorigeeeen</a></p>
+    <p><i class ="github icon"></i>　<a href="https://github.com/ytskmt14">ytskmt14</a></p>
+      
+    </div>
+  </div>
 </div>
+{% endblock %}
 
-{% endblock  %}
+{% block extra_js %}
+<script>
+  $('#about').click(function() {
+    $('.ui.modal.about')
+    .modal('show');
+  })
+
+  $('#product').click(function() {
+    $('.ui.modal.product')
+    .modal('show');
+  })
+
+  $('#contact').click(function() {
+    $('.ui.modal.contact')
+    .modal('show');
+  })
+</script>
+{% endblock %}
